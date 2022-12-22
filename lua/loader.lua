@@ -137,6 +137,7 @@ return packer.startup({
 
     use 'windwp/nvim-ts-autotag'
 
+    use "nvim-tree/nvim-web-devicons"
     use {
       'goolord/alpha-nvim',
       requires = { 'nvim-tree/nvim-web-devicons' },
