@@ -5,10 +5,7 @@
 -- ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
 -- ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 -- ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
---
--- File: plugins/lualine.lua
--- Description: nvim-autopairs config
--- Author: Kien Nguyen-Tuan <kiennt2609@gmail.com>
+
 local npairs = require('nvim-autopairs')
 
 npairs.setup({

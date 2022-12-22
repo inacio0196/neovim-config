@@ -5,11 +5,7 @@
 -- ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
 -- ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 -- ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
---
--- File: plugins/loader.lua
--- Description: Plugin manager configuration file
--- Author: Kien Nguyen-Tuan <kiennt2609@gmail.com>
--- Automatically install packer
+
 local fn = vim.fn
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
@@ -140,6 +136,16 @@ return packer.startup({
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
     use 'windwp/nvim-ts-autotag'
+
+    use {
+      'goolord/alpha-nvim',
+      requires = { 'nvim-tree/nvim-web-devicons' },
+      config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+      end
+    }
+
+    use 'MattesGroeger/vim-bookmarks'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

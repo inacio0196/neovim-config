@@ -5,11 +5,7 @@
 -- ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
 -- ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 -- ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
---
--- File: plugins/lsp.lua
--- Description: LSP setup and config
--- Author: Kien Nguyen-Tuan <kiennt2609@gmail.com>
--- Enable some language servers with the additional completion capabilities offered by nvim-cmp
+
 local servers = {'dockerls', 'bashls', 'gopls', 'pyright', 'jsonls', 'vimls', 'tsserver', 'sumneko_lua'}
 require("mason").setup()
 require("mason-lspconfig").setup({

@@ -5,10 +5,7 @@
 -- ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
 -- ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 -- ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
---
--- File: plugins/comment.lua
--- Description: nvim comment config
--- Author: Kien Nguyen-Tuan <kiennt2609@gmail.com>
+
 require('Comment').setup {
     active = true,
     on_config_done = nil,

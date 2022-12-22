@@ -5,10 +5,7 @@
 -- ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
 -- ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 -- ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
---
--- File: plugins/gitsigns.lua
--- Description: Gitsigns configuration
--- Author: Kien Nguyen-Tuan <kiennt2609@gmail.com>
+
 local status_ok, gitsigns = pcall(require, "gitsigns")
 if not status_ok then
   return

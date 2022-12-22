@@ -5,11 +5,7 @@
 -- ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
 -- ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 -- ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
---
--- File: plugins/init.lua
--- Description: Custom plugins configuration
--- Author: Kien Nguyen-Tuan <kiennt2609@gmail.com>
--- Custom plugin configs
+
 require('plugins/statusline')
 require('plugins/nvim-tree')
 require('plugins/nvim-treesitter')
@@ -24,3 +20,5 @@ require('plugins/gitsigns')
 require('plugins/hop')
 require('plugins/bufferline')
 require('plugins/nvim-ts-autotag')
+require('plugins/alpha')
+require('plugins/nvim-bookmarks')

@@ -5,10 +5,6 @@
 -- ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
 -- ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 -- ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
---
--- File: core/keymaps.lua
--- Description: Key mapping configs
--- Author: Kien Nguyen-Tuan <kiennt2609@gmail.com>
 
 vim.g.mapleader = ' '
 
