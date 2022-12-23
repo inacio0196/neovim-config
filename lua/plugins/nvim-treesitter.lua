@@ -17,9 +17,10 @@ require('nvim-treesitter.configs').setup {
   indent = {
     enable = true
   },
-  autotag = {
-    enable = true
-  },
+  -- autotag = {
+  --   enable = true,
+  --   filetypes = { "html", "xml", "php", "vue", "tsx", "jsx" },
+  -- },
   context_commentstring = {
     enable = true,
     enable_autocmd = false

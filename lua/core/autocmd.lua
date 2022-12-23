@@ -13,47 +13,47 @@ local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
 -- Highlight on yank
 augroup('YankHighlight', {
-    clear = true
+  clear = true
 })
 autocmd('TextYankPost', {
-    group = 'YankHighlight',
-    callback = function()
-        vim.highlight.on_yank({
-            higroup = 'IncSearch',
-            timeout = '1000'
-        })
-    end
+  group = 'YankHighlight',
+  callback = function()
+    vim.highlight.on_yank({
+      higroup = 'IncSearch',
+      timeout = '1000'
+    })
+  end
 })
 
 -- Remove whitespace on save
 autocmd('BufWritePre', {
-    pattern = '',
-    command = ":%s/\\s\\+$//e"
+  pattern = '',
+  command = ":%s/\\s\\+$//e"
 })
 
 -- Don't auto commenting new lines
 autocmd('BufEnter', {
-    pattern = '',
-    command = 'set fo-=c fo-=r fo-=o'
+  pattern = '',
+  command = 'set fo-=c fo-=r fo-=o'
 })
 
 -- Set indentation to 2 spaces
 augroup('setIndent', {
-    clear = true
+  clear = true
 })
 autocmd('Filetype', {
-    group = 'setIndent',
-    pattern = {'xml', 'html', 'xhtml', 'css', 'scss', 'javascript', 'typescript', 'yaml', 'lua'},
-    command = 'setlocal shiftwidth=2 tabstop=2'
+  group = 'setIndent',
+  pattern = {'xml', 'html', 'xhtml', 'css', 'scss', 'javascript', 'typescript', 'yaml', 'lua'},
+  command = 'setlocal shiftwidth=2 tabstop=2'
 })
 
 -- Set colorcolumn
 augroup('setColorColumn', {
-    clear = true
+  clear = true
 })
 
 autocmd('Filetype', {
-    group = 'setColorColumn',
-    pattern = {'python', 'rst', 'c', 'cpp'},
-    command = 'set colorcolumn=80 nowrap'
+  group = 'setColorColumn',
+  pattern = {'python', 'rst', 'c', 'cpp'},
+  command = 'set colorcolumn=80 nowrap'
 })

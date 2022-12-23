@@ -318,34 +318,18 @@ ins_right {
   }
 }
 
--- Now don't forget to initialize lualine
-lualine.setup({
+local lualine_config = {
   options = {
     disabled_filetypes = {'packer', 'NvimTree'},
   },
   sections = {
-    lualine_x = {
-      function()
-        local msg = 'null'
-        local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-        local clients = vim.lsp.get_active_clients()
-        if next(clients) == nil then
-          return msg
-        end
-        for _, client in ipairs(clients) do
-          local filetypes = client.config.filetypes
-          if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-            return client.name
-          end
-        end
-        return msg
-      end,
-      icon = ' LSP:',
-      color = {
-        fg = colors.cyan,
-        gui = 'bold'
-      }
-    },
+    -- lualine_a = {},
+    -- lualine_b = {},
+    -- lualine_y = {},
+    -- lualine_z = {},
+    -- These will be filled later
+    --[[ lualine_c = {}, ]]
+    lualine_x = {}
   },
   inactive_sections = {
     -- these are to remove the defaults
@@ -356,4 +340,42 @@ lualine.setup({
     lualine_c = {},
     lualine_x = {}
   }
-})
+}
+
+
+-- Inserts a component in lualine_c at left section
+local function insert_left_component(component)
+  table.insert(config.sections.lualine_c, component)
+end
+
+-- Inserts a component in lualine_x ot right section
+local function insert_right_component(component)
+  table.insert(lualine_config.sections.lualine_x, component)
+end
+
+insert_right_component{
+  -- Lsp server name .
+  function()
+    local msg = 'null'
+    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+    local clients = vim.lsp.get_active_clients()
+    if next(clients) == nil then
+      return msg
+    end
+    for _, client in ipairs(clients) do
+      local filetypes = client.config.filetypes
+      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+        return client.name
+      end
+    end
+    return msg
+  end,
+  icon = ' LSP:',
+  color = {
+    fg = colors.fg,
+    gui = 'bold',
+  }
+}
+
+-- Now don't forget to initialize lualine
+lualine.setup(lualine_config)
