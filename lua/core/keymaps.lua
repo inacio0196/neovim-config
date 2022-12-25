@@ -6,6 +6,15 @@
 -- ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 -- ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
 
+-- n: Normal mode.
+-- i: Insert mode.
+-- x: Visual mode.
+-- s: Selection mode.
+-- v: Visual + Selection.
+-- t: Terminal mode.
+-- o: Operator-pending.
+-- '': Yes, an empty string. Is the equivalent of n + v + o.
+
 vim.g.mapleader = ' '
 
 -- Disable arrow keys

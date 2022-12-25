@@ -6,13 +6,14 @@
 -- ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 -- ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
 
+local vim = vim
 local cmd = vim.cmd
 -- Set options (global/buffer/windows-scoped)
 local opt = vim.opt
 -- Global variables
 local g = vim.g
-local s = vim.s
-local indent = 4
+--[[ local s = vim.s ]]
+local indent = 2
 
 cmd([[
 	filetype plugin indent on

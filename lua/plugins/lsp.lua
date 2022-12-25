@@ -6,7 +6,7 @@
 -- ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 -- ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
 
-local servers = {'dockerls', 'bashls', 'gopls', 'pyright', 'jsonls', 'vimls', 'tsserver', 'sumneko_lua'}
+local servers = {'dockerls', 'bashls', 'gopls', 'pyright', 'jsonls', 'vimls', 'tsserver', 'sumneko_lua', 'vuels', 'rust_analyzer'}
 require("mason").setup()
 require("mason-lspconfig").setup({
   -- A list of servers to automatically install if they're not already installed. Example: { "rust_analyzer@nightly", "sumneko_lua" }
