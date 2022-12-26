@@ -15,6 +15,8 @@
 -- o: Operator-pending.
 -- '': Yes, an empty string. Is the equivalent of n + v + o.
 
+local vim = vim
+
 vim.g.mapleader = ' '
 
 -- Disable arrow keys
@@ -76,6 +78,5 @@ vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', {}) -- open/close
 vim.keymap.set('n', '<leader>nr', ':NvimTreeRefresh<CR>', {}) -- refresh
 vim.keymap.set('n', '<leader>nf', ':NvimTreeFindFile<CR>', {}) -- search file
 
--- Terminal
-vim.keymap.set('n', '<leader>tt', ':NeotermToggle<CR>', {})
---[[ vim.keymap.set('n', '<leader>tx', ':NeotermExit<CR>', {}) ]]
+-- Todo Comments
+vim.keymap.set('n', '<space>tc', ':TodoLocList<CR>', {}) -- Open Todo comments

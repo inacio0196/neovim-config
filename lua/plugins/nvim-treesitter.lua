@@ -8,11 +8,12 @@
 
 require('nvim-treesitter.configs').setup {
   -- A list of parser names, or 'all'
-  ensure_installed = {'go', 'python', 'dockerfile', 'json', 'yaml', 'markdown', 'html', 'scss', 'css', 'vim', 'javascript', 'typescript'},
+  ensure_installed = {'go', 'python', 'dockerfile', 'json', 'yaml', 'markdown', 'html', 'scss', 'css', 'vim', 'javascript', 'typescript', 'org'},
 
   highlight = {
     enable = true,
-    use_languagetree = true
+    use_languagetree = true,
+    additional_vim_regex_highlighting = {'org'},
   },
   indent = {
     enable = true

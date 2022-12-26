@@ -16,7 +16,7 @@ local g = vim.g
 local indent = 2
 
 cmd([[
-	filetype plugin indent on
+  filetype plugin indent on
 ]])
 
 opt.backspace = {'eol', 'start', 'indent'}
@@ -75,7 +75,7 @@ opt.writebackup = false
 -- autocomplete
 opt.completeopt = {'menu', 'menuone', 'noselect'}
 opt.shortmess = opt.shortmess + {
-    c = true
+  c = true
 }
 
 -- showmode
@@ -108,15 +108,16 @@ opt.foldlevel = 99
 
 -- Disable builtin plugins
 local disabled_built_ins = {"2html_plugin", "getscript", "getscriptPlugin", "gzip", "logipat", "netrw", "netrwPlugin",
-                            "netrwSettings", "netrwFileHandlers", "matchit", "tar", "tarPlugin", "rrhelper",
-                            "spellfile_plugin", "vimball", "vimballPlugin", "zip", "zipPlugin", "tutor", "rplugin",
-                            "synmenu", "optwin", "compiler", "bugreport", "ftplugin"}
+  "netrwSettings", "netrwFileHandlers", "matchit", "tar", "tarPlugin", "rrhelper",
+  "spellfile_plugin", "vimball", "vimballPlugin", "zip", "zipPlugin", "tutor", "rplugin",
+  "synmenu", "optwin", "compiler", "bugreport", "ftplugin"}
 
 for _, plugin in pairs(disabled_built_ins) do
-    g["loaded_" .. plugin] = 1
+  g["loaded_" .. plugin] = 1
 end
 
 -- Colorscheme
 -- By default, use rose-pine
 cmd('colorscheme onedark')
+-- Create template files
 cmd([[ autocmd BufNewFile *.sh :call append(0, '#!/usr/bin/env bash') ]])

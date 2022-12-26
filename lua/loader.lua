@@ -120,8 +120,6 @@ return packer.startup({
       requires = {'nvim-telescope/telescope.nvim'}
     }
 
-    -- Floating terminal
-    use 'itmecho/neoterm.nvim'
     use 'navarasu/onedark.nvim' -- theme
 
     use {
@@ -148,6 +146,18 @@ return packer.startup({
 
     use 'MattesGroeger/vim-bookmarks'
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+    use {
+      "folke/todo-comments.nvim",
+      requires = "nvim-lua/plenary.nvim",
+      config = function()
+        require("todo-comments").setup {
+          -- your configuration comes here
+          -- or leave it empty to use the default settings
+          -- refer to the configuration section below
+        }
+      end
+    }
+    use 'MunifTanjim/nui.nvim'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
