@@ -19,3 +19,7 @@ require('nvim-ts-autotag').setup()
 --     'hbs'
 --   }
 -- })
+
+vim.cmd([[
+  let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.tsx'
+]])

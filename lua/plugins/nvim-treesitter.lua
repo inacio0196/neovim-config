@@ -20,7 +20,7 @@ require('nvim-treesitter.configs').setup {
   },
   -- autotag = {
   --   enable = true,
-  --   filetypes = { "html", "xml", "php", "vue", "tsx", "jsx" },
+  --   --[[ filetypes = { "html", "xml", "php", "vue", "tsx", "jsx" }, ]]
   -- },
   context_commentstring = {
     enable = true,
